@@ -138,19 +138,19 @@
 
   .upgrades-container-wrapper {
     display: flex;
-    justify-content: space-between; /* Separa os elementos */
-    align-items: flex-start; /* Alinha no topo */
-    gap: 40px; /* Espaço entre os elementos */
-    max-width: 900px; /* Largura máxima */
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 40px; 
+    max-width: 900px; 
     padding: 5rem ;
-    margin: 0 auto; /* Centraliza na página */
+    margin: 0 auto; 
   }
 
   .upgrades-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 20px; /* Espaço entre os itens */
-    justify-content: center; /* Centraliza os itens */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    justify-content: center;
     background-color: lightgray;
   }
 
@@ -160,14 +160,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1; /* Ocupa o espaço disponível */
+    flex: 1; 
     width: 100%;
     height: 100%;
   }
   .upgrade1 img {
-    width: 150px;  /* Ajuste conforme necessário */
-    height: 150px; /* Mantém o tamanho quadrado */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    width: 150px;  
+    height: 150px; 
+    object-fit: cover; 
   }
   .upgrade1 a{
     font-size: x-large;
@@ -181,7 +181,7 @@
   .upgrade-review {
     flex: 1;
     max-width: 50%;
-    background: lightgray; /* Fundo leve para destacar */
+    background: lightgray; 
     padding: 20px;
     border-radius: 10px;
   }
@@ -205,10 +205,9 @@
   }
 
   @media screen and (max-width: 1024px) {
-    /* Prevent horizontal scrolling */
     * {
         box-sizing: border-box;
-        max-width: 100%; /* Ensure all elements fit */
+        max-width: 100%;
     }
 
     body {
@@ -216,16 +215,16 @@
         padding: 0;
         font-size: 16px;
         background: none;
-        overflow-x: hidden; /* Prevent side scrolling */
+        overflow-x: hidden;
     }
 
     #wrapper {
-      width: 100%; /* Keep within screen */
+      width: 100%;
       padding: 0;
-      margin: 0 auto; /* Center content */
+      margin: 0 auto; 
       border: 10px solid transparent; 
       border-image: linear-gradient(45deg, red, blue, green, yellow) 1;
-      overflow: hidden; /* Prevent extra space */
+      overflow: hidden; 
     }
 
     #top-header {
@@ -252,7 +251,7 @@
         padding: 5px;
         display: flex;
         justify-content: center;
-        flex-wrap: wrap; /* Prevents overflow */
+        flex-wrap: wrap;
     }
 
     nav ul li {
@@ -264,7 +263,7 @@
       font-size: medium;
     }
 
-    /* Hero Image Fix */
+   
     .hero {
         width: 100%;
         height: auto;
@@ -294,7 +293,7 @@
         width: 100%;
     }
 
-    /* Upgrade Review on Top */
+    
     .upgrade-review {
         order: -1;
         width: 100%;
@@ -347,7 +346,7 @@
       font-style: italic;
     }
 
-    /* Footer fix */
+    
     footer {
         font-size: 1rem;
         text-align: center;
