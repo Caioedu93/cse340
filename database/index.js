@@ -30,8 +30,12 @@ module.exports = {
   },
 }
 } else {
+  // Ensure SSL is enabled in production (Render requires SSL)
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false, // For Render's PostgreSQL, SSL is required
+    },
   })
   module.exports = pool
 }
