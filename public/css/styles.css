@@ -242,6 +242,24 @@ h2{
   color: red;
   font-weight: bold;
 }
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.error-message h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.error-message p {
+  font-size: 1.1em;
+}
+
 
 
 

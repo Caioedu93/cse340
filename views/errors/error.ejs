@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom Error Page for CSE Motors">
+    <meta name="author" content="Caio Eduardo J. de Paula">
+    <title><%= title %> | CSE Motors</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <main>
+        <h1><%= title %></h1> <!-- Title will display the error status, like "404 - Error" -->
+        
+        <!-- Display the error message -->
+        <% if (message) { %>
+            <div class="error-message">
+                <h2>Oops!</h2>
+                <p><%- message %></p> <!-- This will show the error message -->
+            </div>
+        <% } %>
+    </main>
+
+</body>
+</html>
