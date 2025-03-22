@@ -236,6 +236,23 @@ h2{
   color: #27ae60;
 }
 
+.vehicle-info h2{
+  font-size: 50px;
+  margin: 5px 0;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.vehicle-info span{
+  font-size: 35px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.vehicle-info p {
+  font-size: 20px;
+  font-weight: bold;
+}
 .notice {
   text-align: center;
   font-size: 18px;
@@ -260,8 +277,26 @@ h2{
   font-size: 1.1em;
 }
 
+.vehicle-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.vehicle-image {
+  flex: 1 1 50%;
+  padding: 10px;
+}
 
+.vehicle-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vehicle-info {
+  flex: 1 1 50%;
+  padding: 10px;
+}
 
 footer{
     font-size: x-large;
@@ -269,152 +304,137 @@ footer{
 }
 
 @media screen and (max-width: 1024px) {
-    * {
-        box-sizing: border-box;
-        max-width: 100%;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-size: 16px;
-        background: none;
-        overflow-x: hidden;
-    }
-
-    #wrapper {
-      width: 100%;
+  * {
+      box-sizing: border-box;
+      max-width: 100%;
+  }
+  body {
+      margin: 0;
       padding: 0;
-      margin: 0 auto; 
-      border: 10px solid transparent; 
-      border-image: linear-gradient(45deg, red, blue, green, yellow) 1;
-      overflow: hidden; 
-    }
-
-    #top-header {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .siteName a {
-        font-size: 2rem;
-        display: block;
-        text-align: center;
-    }
-
-    #tools a{
-        font-size: 1rem;
-        display: block;
-        text-align: center;
-        position: initial;
-    }
-
-    nav ul {
-        flex-direction: row;
-        text-align: center;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        padding: 5px;
-        font-size: 0.7rem;
-    }
-
-    .welcome{
-      font-size: medium;
-    }
-
-   
-    .hero {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .hero-image {
-        height: 30vh;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-    }
-
-    .hero-overlay {
-        text-align: left;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .hero-overlay h2, .hero-overlay p {
-        font-size: 0.9rem;
-    }
-
-    .hero-overlay button {
-        font-size: 1.2rem;
-        width: 100%;
-    }
-
-    
-    .upgrade-review {
-        order: -1;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    
-    .upgrades-container-wrapper {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        width: 100%;
-        margin: auto;
-        padding: 0;
-        overflow: hidden;
-    }
-    h2{
+      font-size: 16px;
+      background: none;
+      overflow-x: hidden;
+  }
+  #wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto; 
+    border: 10px solid transparent; 
+    border-image: linear-gradient(45deg, red, blue, green, yellow) 1;
+    overflow: hidden; 
+  }
+  #top-header {
+      text-align: center;
+      padding: 10px;
+  }
+  .siteName a {
       font-size: 2rem;
-      padding: 0;
-    }
-
-    .upgrades-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 100%;
-        max-width: 600px;
-        margin: auto;
-    }
-
-    .upgrade1 {
-        text-align: center;
-    }
-
-    .upgrade1 img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-    }
-    .upgrade-review ul {
-      list-style: none;
-      padding: 0;
-    }
+      display: block;
+      text-align: center;
+  }
+  #tools a{
+      font-size: 1rem;
+      display: block;
+      text-align: center;
+      position: initial;
+  }
+  nav ul {
+      flex-direction: row;
+      text-align: center;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  nav ul li {
+      padding: 5px;
+      font-size: 0.7rem;
+  }
+  .welcome{
+    font-size: medium;
+  }
   
-    .upgrade-review li {
-      margin-bottom: 10px;
+  .hero {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+  }
+  .hero-image {
+      height: 30vh;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+  }
+  .hero-overlay {
+      text-align: left;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0;
+  }
+  .hero-overlay h2, .hero-overlay p {
+      font-size: 0.9rem;
+  }
+  .hero-overlay button {
       font-size: 1.2rem;
-      font-style: italic;
-    }
+      width: 100%;
+  }
+  
+  .upgrade-review {
+      order: -1;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+  
+  .upgrades-container-wrapper {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      overflow: hidden;
+  }
+  h2{
+    font-size: 2rem;
+    padding: 0;
+  }
+  .upgrades-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+  }
+  .upgrade1 {
+      text-align: center;
+  }
+  .upgrade1 img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+  }
+  .upgrade-review ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    
-    footer {
-        font-size: 1rem;
-        text-align: center;
-        width: 100%;
-        overflow: hidden;
-    }
+  .upgrade-review li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  footer {
+      font-size: 1rem;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+  }
+
+  .vehicle-detail {
+    flex-direction: column;
+}
 }

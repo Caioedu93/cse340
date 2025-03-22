@@ -19,4 +19,26 @@ invCont.buildByClassificationId = async function (req, res, next) {
   })
 }
 
+/* ***************************
+ * Build inventory item detail view
+ * ************************** */
+invCont.buildInventoryDetail = async function (req, res, next) {
+  const inv_id = req.params.inv_id
+  const vehicle = await invModel.getInventoryById(inv_id)
+  let nav = await utilities.getNav()
+  const detail = await utilities.buildVehicleDetail(vehicle[0]) // Assuming getInventoryById returns an array
+
+  res.render("./inventory/detail", {
+      title: vehicle[0].inv_make + " " + vehicle[0].inv_model + " Details",
+      nav,
+      detail,
+  })
+}
+
+
+// Controller function to trigger a 500 error
+invCont.triggerServerError = async function (req, res, next) {
+  throw new Error("Intentional Server Error");
+};
+
 module.exports = invCont

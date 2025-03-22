@@ -58,6 +58,28 @@ Util.buildClassificationGrid = async function(data){
   return grid
 }
 
+
+/* **************************************
+ * Build the inventory item detail HTML
+ * ************************************ */
+Util.buildVehicleDetail = async function (vehicle) {
+  let detail = `<div class="vehicle-detail">`;
+  detail += `<div class="vehicle-image">`;
+  detail += `<img src="${vehicle.inv_image}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model} on CSE Motors" />`;
+  detail += `</div>`;
+  detail += `<div class="vehicle-info">`;
+  detail += `<h2>${vehicle.inv_make} ${vehicle.inv_model}</h2>`;
+  detail += `<p><strong>Year:</strong> ${vehicle.inv_year}</p>`;
+  detail += '<span>$' 
+      + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span>';
+  detail += `<p><strong>Mileage:</strong> ${new Intl.NumberFormat('en-US').format(vehicle.inv_miles)}</p>`;
+  detail += `<p><strong>Color:</strong> ${vehicle.inv_color}</p>`;
+  detail += `<p><strong>Description:</strong> ${vehicle.inv_description}</p>`;
+  detail += `</div>`;
+  detail += `</div>`;
+  return detail;
+}
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
